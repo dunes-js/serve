@@ -1,0 +1,31 @@
+{
+  "name": "@dunes/serve",
+  "version": "0.9.3",
+  "type": "module",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/omarfkuri/dunes.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "tools",
+    "typescript"
+  ],
+  "author": "Omar <omarfkuri@gmail.com>",
+  "scripts": {
+    "build": "rm -rf lib && tsc && npm version patch"
+  },
+  "dependencies": {
+    "@dunes/tools": "^0.9.78",
+    "@types/express": "^4.17.19",
+    "@types/node": "^20.8.0",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.0"
+  }
+}
