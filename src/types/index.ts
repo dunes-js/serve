@@ -13,4 +13,6 @@ export interface ServerConfig {
 export interface ServerResult {
   io: IoServer
   server: Server
+  port: number
+  host: string
 }
