@@ -1,21 +1,10 @@
 
   
-import type { Prom } from "@dunes/tools";
-import express, { type Express } from "express"
-import http, { Server } from 'http';
+import express from "express"
+import http from 'http';
 import { Server as IoServer } from "socket.io";
+import type { ServerConfig, ServerResult } from "./index.js";
 
-
-interface ServerConfig {
-  port: number
-  host?: string
-  assign(app: Express, express: typeof import("express")): Prom<void>
-}
-
-interface ServerResult {
-  io: IoServer
-  server: Server
-}
 
 export async function serve({assign, port, host}: ServerConfig): Promise<ServerResult> {
   const app = express();
